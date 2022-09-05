@@ -1,16 +1,20 @@
 
-let sec = 30
+let sec = 0
 let time = document.getElementById("time")
 
 
-const timer = setInterval(() => {
-   time.innerText =  sec;
-   sec--;
-   console.log(sec);
-   if (sec < 0){
-clearInterval(timer)
+const timer = () => {
+   sec =30
+   let id = null
+   id = setInterval(() => {
+      time.innerText =  sec;
+      sec--;
+      spawnZombies()
+         if (sec < 0){
+         clearInterval(id)
+         }
+   }, 1000)
 }
-}, 1000)
 
 const moveZombie1 = () => {
    let id = null
@@ -136,3 +140,12 @@ const moveZombie8 = () => {
    }
    id = setInterval(frame, 5)
 }
+const spawnZombies = () => {
+      let position = Math.floor(Math.random()*8)+1
+      const zombie = document.createElement("img")
+      zombie.src = "./assets/zombie.gif"
+      zombie.className = "zombie"
+      document.getElementById("zombie"+position).append(zombie)
+      console.log(position)
+      }
+

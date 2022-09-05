@@ -148,3 +148,7 @@ body{
     margin-top: 64vh;
     margin-left: 0vw;
 }
+.zombie{
+    height: 100px;
+    width: 100px;
+}
