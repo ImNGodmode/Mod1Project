@@ -79,8 +79,16 @@ body{
     width: 75vw;
     border-radius: 50%;
     background-color: black;
+    position: relative;
 }
 #time{
     display: flex;
     justify-content: center;
+}
+#zombie1{
+    border: solid red 1px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 32vh;
 }
