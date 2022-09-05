@@ -71,7 +71,7 @@ body{
     border: solid black 2px;
     position: fixed;
     align-self: flex-start;
-    margin-left: -70vw;
+    margin-left: -50vw;
 }
 .playSpace{
     border: solid blue 5px;
@@ -91,4 +91,60 @@ body{
     width: 100px;
     position: absolute;
     margin-top: 32vh;
+}
+#zombie2{
+    border: solid red 1px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 32vh;
+    margin-left: 68vw;
+}
+#zombie3{
+    border: solid red 1px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 0vh;
+    margin-left: 34vw;
+}
+#zombie4{
+    border: solid red 1px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 64vh;
+    margin-left: 34vw;
+}
+#zombie5{
+    border: solid red 1px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 0vh;
+    margin-left: 68vw;
+}
+#zombie6{
+    border: solid red 1px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 64vh;
+    margin-left: 68vw;
+}
+#zombie7{
+    border: solid red 1px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 0vh;
+    margin-left: 0vw;
+}
+#zombie8{
+    border: solid red 1px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 64vh;
+    margin-left: 0vw;
 }
