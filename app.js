@@ -9,6 +9,24 @@ let pos5 = 0
 let pos6 = 0
 let pos7 = 0
 let pos8 = 0
+let id1 = null
+let id2 = null
+let id3 = null
+let id4 = null
+let id5 = null
+let id6 = null
+let id7 = null
+let id8 = null
+const zombie1 = document.getElementById('zombie1')
+const zombie2 = document.getElementById('zombie2')
+const zombie3 = document.getElementById('zombie3')
+const zombie4 = document.getElementById('zombie4')
+const zombie5 = document.getElementById('zombie5')
+const zombie6 = document.getElementById('zombie6')
+const zombie7 = document.getElementById('zombie7')
+const zombie8 = document.getElementById('zombie8')
+
+
 
 const timer = () => {
    sec =30
@@ -24,128 +42,113 @@ const timer = () => {
 }
 
 const moveZombie1 = () => {
-   let id = null
-   const zombie = document.getElementById('zombie1')
-    pos1 = 0
-   clearInterval(id)
+   
+   pos1 = 0
+   clearInterval(id1)
    const frame = () => {
       if (pos1 === 350) {
-         clearInterval(id)
+         clearInterval(id1)
       }else {
          pos1++
-         zombie.style.left = pos1 + "px"
+         zombie1.style.left = pos1 + "px"
       }
    }
-   id = setInterval(frame, 5)
+   id1 = setInterval(frame, 5)
 }
 const moveZombie2 = () => {
-   let id = null
-   const zombie = document.getElementById('zombie2')
    pos2 = 0
-   clearInterval(id)
+   clearInterval(id2)
    const frame = () => {
       if (pos2 === 350) {
-         clearInterval(id)
+         clearInterval(id2)
       }else {
          pos2++
-         zombie.style.right = pos2 + "px"
+         zombie2.style.right = pos2 + "px"
       }
    }
-   id = setInterval(frame, 5)
+   id2 = setInterval(frame, 5)
 }
 const moveZombie3 = () => {
-   let id = null
-   const zombie = document.getElementById('zombie3')
    pos3 = 0
-   clearInterval(id)
+   clearInterval(id3)
    const frame = () => {
       if (pos3 === 200) {
-         clearInterval(id)
+         clearInterval(id3)
       }else {
          pos3++
-         zombie.style.top = pos3 + "px"
+         zombie3.style.top = pos3 + "px"
       }
    }
-   id = setInterval(frame, 5)
+   id3 = setInterval(frame, 5)
 }
 const moveZombie4 = () => {
-   let id = null
-   const zombie = document.getElementById('zombie4')
    pos4 = 0
-   clearInterval(id)
+   clearInterval(id4)
    const frame = () => {
       if (pos4 === 200) {
-         clearInterval(id)
+         clearInterval(id4)
       }else {
          pos4++
-         zombie.style.bottom = pos4 + "px"
+         zombie4.style.bottom = pos4 + "px"
       }
    }
-   id = setInterval(frame, 5)
+   id4 = setInterval(frame, 5)
 }
 const moveZombie5 = () => {
-   let id = null
-   const zombie = document.getElementById('zombie5')
    pos5 = 0
-   clearInterval(id)
+   clearInterval(id5)
    const frame = () => {
       if (pos5 === 350) {
-         clearInterval(id)
+         clearInterval(id5)
       }else {
          pos5++
-         zombie.style.right = pos5 + "px"
-         zombie.style.top = pos5 + "px"
+         zombie5.style.right = pos5 + "px"
+         zombie5.style.top = pos5 + "px"
       }
    }
-   id = setInterval(frame, 5)
+   id5 = setInterval(frame, 5)
 }
 const moveZombie6 = () => {
-   let id = null
-   const zombie = document.getElementById('zombie6')
    pos6 = 0
-   clearInterval(id)
+   clearInterval(id6)
    const frame = () => {
       if (pos6 === 350) {
-         clearInterval(id)
+         clearInterval(id6)
       }else {
          pos6++
-         zombie.style.right = pos6 + "px"
-         zombie.style.bottom = pos6 + "px"
+         zombie6.style.right = pos6 + "px"
+         zombie6.style.bottom = pos6 + "px"
       }
    }
-   id = setInterval(frame, 5)
+   id6 = setInterval(frame, 5)
 }
 const moveZombie7 = () => {
-   let id = null
-   const zombie = document.getElementById('zombie7')
    pos7 = 0
-   clearInterval(id)
+   clearInterval(id7)
    const frame = () => {
       if (pos7 === 350) {
-         clearInterval(id)
+         clearInterval(id7)
       }else {
          pos7++
-         zombie.style.left = pos7 + "px"
-         zombie.style.top = pos7 + "px"
+         zombie7.style.left = pos7 + "px"
+         zombie7.style.top = pos7 + "px"
       }
    }
-   id = setInterval(frame, 5)
+   id7 = setInterval(frame, 5)
 }
 const moveZombie8 = () => {
-   let id = null
-   const zombie = document.getElementById('zombie8')
    pos8 = 0
-   clearInterval(id)
+   clearInterval(id8)
    const frame = () => {
       if (pos8 === 350) {
-         clearInterval(id)
+         clearInterval(id8)
       }else {
          pos8++
-         zombie.style.left = pos8 + "px"
-         zombie.style.bottom = pos8 + "px"
+         zombie8.style.left = pos8 + "px"
+         zombie8.style.bottom = pos8 + "px"
       }
    }
-   id = setInterval(frame, 5)
+   id8 = setInterval(frame, 5)
 }
 const spawnZombies = () => {
       let position = Math.floor(Math.random()*8)+1
@@ -183,4 +186,56 @@ const zombieAtk = () => {
    if (document.getElementById("zombie8").hasChildNodes() === true && pos8 === 0) {
       moveZombie8()
    }
+}
+const killZombie1 = () => {
+   zombie1.removeChild(zombie1.firstChild)
+   clearInterval(id1)
+   pos1 = 0
+   zombie1.style.left = pos1 + "px"
+}
+const killZombie2 = () => {
+   zombie2.removeChild(zombie2.firstChild)
+   clearInterval(id2)
+   pos2 = 0
+   zombie2.style.right = pos2 + "px"
+}
+const killZombie3 = () => {
+   zombie3.removeChild(zombie3.firstChild)
+   clearInterval(id3)
+   pos3 = 0
+   zombie3.style.top = pos3 + "px"
+}
+const killZombie4 = () => {
+   zombie4.removeChild(zombie4.firstChild)
+   clearInterval(id4)
+   pos4 = 0
+   zombie4.style.bottom = pos4 + "px"
+}
+const killZombie5 = () => {
+   zombie5.removeChild(zombie5.firstChild)
+   clearInterval(id5)
+   pos5 = 0
+   zombie5.style.right = pos5 + "px"
+   zombie5.style.top = pos5 + "px"
+}
+const killZombie6 = () => {
+   zombie6.removeChild(zombie6.firstChild)
+   clearInterval(id6)
+   pos6 = 0
+   zombie6.style.right = pos6 + "px"
+   zombie6.style.bottom = pos6 + "px"
+}
+const killZombie7 = () => {
+   zombie7.removeChild(zombie7.firstChild)
+   clearInterval(id7)
+   pos7 = 0
+   zombie7.style.left = pos7 + "px"
+   zombie7.style.top = pos7 + "px"
+}
+const killZombie8 = () => {
+   zombie8.removeChild(zombie8.firstChild)
+   clearInterval(id8)
+   pos8 = 0
+   zombie8.style.left = pos8 + "px"
+   zombie8.style.bottom = pos8 + "px"
 }
