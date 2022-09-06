@@ -52,7 +52,7 @@ body{
     padding-right: 20px;
     border-radius: 30px;
 }
-.highScore {
+#highScore {
     border: solid rgb(167, 2, 21) 5px;
     color: rgb(167, 2, 21);
     padding-left: 20px;

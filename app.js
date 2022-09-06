@@ -3,6 +3,7 @@ let sec = 0
 let time = document.getElementById("time")
 let lvl = 1
 let lvlSpeed = 1
+let highScore = 0
 
 let pos1 = 0
 let pos2 = 0
@@ -33,6 +34,7 @@ const zombie7 = document.getElementById('zombie7')
 const zombie8 = document.getElementById('zombie8')
 const level = document.getElementById("lvl")
 const player = document.getElementById("playerHome")
+const score = document.getElementById("highScore")
 
 const player1 = () => {
    const newPlayer = document.createElement("img")
@@ -47,7 +49,6 @@ const player2 = () => {
       newPlayer.className = "playerImg"
       player.append(newPlayer)
    }
-
 
 const timer = () => {
    sec =10
@@ -282,6 +283,8 @@ const nextLevel = () => {
    timer()
 }
 const reset = () => {
+   checkHighScore()
+   player.removeChild(player.firstChild)
    lvl = 1
    lvlSpeed = 1
    sec = 0
@@ -297,3 +300,9 @@ const reset = () => {
    killZombie8()
    clearInterval(id)
 }
+const checkHighScore = () => {
+   if (lvl > highScore) {
+      highScore = lvl
+      score.innerHTML = `High Score ${highScore}`
+   }
+} 
