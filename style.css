@@ -59,7 +59,7 @@ body{
     padding-right: 20px;
     border-radius: 30px;
 }
-.playContainer{
+#playContainer{
     border: solid black;
     display: flex;
     justify-content: center;
@@ -162,4 +162,16 @@ body{
 .zombie{
     height: 100px;
     width: 100px;
+}
+.gameOver{
+    position: fixed;
+    border: solid gold 1px;
+    width: 100vw;
+    height: 30vh;
+    font-size: 180px;
+    background-color: rgb(167, 2, 21);
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    z-index: 7;
 }

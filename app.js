@@ -4,6 +4,7 @@ let time = document.getElementById("time")
 let lvl = 1
 let lvlSpeed = 1
 let highScore = 0
+let canlvl = false
 
 let pos1 = 0
 let pos2 = 0
@@ -35,6 +36,9 @@ const zombie8 = document.getElementById('zombie8')
 const level = document.getElementById("lvl")
 const player = document.getElementById("playerHome")
 const score = document.getElementById("highScore")
+const endScrene = document.getElementById("playContainer")
+
+// const gameOver = document.querySelector("gameOver")
 
 const player1 = () => {
    const newPlayer = document.createElement("img")
@@ -43,7 +47,6 @@ const player1 = () => {
    player.append(newPlayer)
 }
 const player2 = () => {
-  
       const newPlayer = document.createElement("img")
       newPlayer.src = "./assets/player2.png"
       newPlayer.className = "playerImg"
@@ -56,9 +59,12 @@ const timer = () => {
    id = setInterval(() => {
       time.innerText =  sec;
       sec--;
-      spawnZombies()
          if (sec < 0){
          clearInterval(id)
+         canlvl = true
+         }else {
+         spawnZombies()
+         canlvl = false
          }
    }, 1000)
 }
@@ -70,6 +76,7 @@ const moveZombie1 = () => {
    const frame = () => {
       if (pos1 === 350) {
          clearInterval(id1)
+         endGame()
       }else {
          pos1++
          zombie1.style.left = pos1 + "px"
@@ -83,6 +90,7 @@ const moveZombie2 = () => {
    const frame = () => {
       if (pos2 === 350) {
          clearInterval(id2)
+         endGame()
       }else {
          pos2++
          zombie2.style.right = pos2 + "px"
@@ -96,6 +104,7 @@ const moveZombie3 = () => {
    const frame = () => {
       if (pos3 === 200) {
          clearInterval(id3)
+         endGame()
       }else {
          pos3++
          zombie3.style.top = pos3 + "px"
@@ -109,6 +118,7 @@ const moveZombie4 = () => {
    const frame = () => {
       if (pos4 === 200) {
          clearInterval(id4)
+         endGame()
       }else {
          pos4++
          zombie4.style.bottom = pos4 + "px"
@@ -122,6 +132,7 @@ const moveZombie5 = () => {
    const frame = () => {
       if (pos5 === 350) {
          clearInterval(id5)
+         endGame()
       }else {
          pos5++
          zombie5.style.right = pos5 + "px"
@@ -136,6 +147,7 @@ const moveZombie6 = () => {
    const frame = () => {
       if (pos6 === 350) {
          clearInterval(id6)
+         endGame()
       }else {
          pos6++
          zombie6.style.right = pos6 + "px"
@@ -150,6 +162,7 @@ const moveZombie7 = () => {
    const frame = () => {
       if (pos7 === 350) {
          clearInterval(id7)
+         endGame()
       }else {
          pos7++
          zombie7.style.left = pos7 + "px"
@@ -164,6 +177,7 @@ const moveZombie8 = () => {
    const frame = () => {
       if (pos8 === 350) {
          clearInterval(id8)
+         endGame()
       }else {
          pos8++
          zombie8.style.left = pos8 + "px"
@@ -278,9 +292,11 @@ const killZombie8 = () => {
 }
 }
 const nextLevel = () => {
-   lvl++
-   lvlSpeed++
-   timer()
+   if (canlvl === true){
+      lvl++
+      lvlSpeed++
+      timer()
+   }
 }
 const reset = () => {
    checkHighScore()
@@ -298,7 +314,7 @@ const reset = () => {
    killZombie6()
    killZombie7()
    killZombie8()
-   clearInterval(id)
+  
 }
 const checkHighScore = () => {
    if (lvl > highScore) {
@@ -306,3 +322,29 @@ const checkHighScore = () => {
       score.innerHTML = `High Score ${highScore}`
    }
 } 
+const endGame = () => {
+  let end = document.createElement("div")
+  end.innerHTML = "Game Over"
+  end.className = "gameOver"
+  end.addEventListener("click", newGame)
+  endScrene.append(end)
+  checkHighScore()
+  player.removeChild(player.firstChild)
+  lvl = 1
+  lvlSpeed = 1
+  sec = 0
+  time.innerText =  sec; 
+  killZombie1()
+  killZombie2()
+  killZombie3()
+  killZombie4()
+  killZombie5()
+  killZombie6()
+  killZombie7()
+  killZombie8()
+  clearInterval(id)
+}
+const newGame = () =>  {
+      endScrene.removeChild(endScrene.lastChild)
+      reset()
+   }
