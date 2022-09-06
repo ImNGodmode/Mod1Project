@@ -1,6 +1,9 @@
 
 let sec = 0
 let time = document.getElementById("time")
+let lvl = 1
+let lvlSpeed = 1
+
 let pos1 = 0
 let pos2 = 0
 let pos3 = 0
@@ -9,6 +12,8 @@ let pos5 = 0
 let pos6 = 0
 let pos7 = 0
 let pos8 = 0
+
+let id = null
 let id1 = null
 let id2 = null
 let id3 = null
@@ -17,6 +22,7 @@ let id5 = null
 let id6 = null
 let id7 = null
 let id8 = null
+
 const zombie1 = document.getElementById('zombie1')
 const zombie2 = document.getElementById('zombie2')
 const zombie3 = document.getElementById('zombie3')
@@ -29,8 +35,8 @@ const zombie8 = document.getElementById('zombie8')
 
 
 const timer = () => {
-   sec =30
-   let id = null
+   sec =10
+ 
    id = setInterval(() => {
       time.innerText =  sec;
       sec--;
@@ -53,7 +59,7 @@ const moveZombie1 = () => {
          zombie1.style.left = pos1 + "px"
       }
    }
-   id1 = setInterval(frame, 5)
+   id1 = setInterval(frame, (15-lvlSpeed))
 }
 const moveZombie2 = () => {
    pos2 = 0
@@ -66,7 +72,7 @@ const moveZombie2 = () => {
          zombie2.style.right = pos2 + "px"
       }
    }
-   id2 = setInterval(frame, 5)
+   id2 = setInterval(frame, (15 - lvlSpeed))
 }
 const moveZombie3 = () => {
    pos3 = 0
@@ -79,7 +85,7 @@ const moveZombie3 = () => {
          zombie3.style.top = pos3 + "px"
       }
    }
-   id3 = setInterval(frame, 5)
+   id3 = setInterval(frame, (15 - lvlSpeed))
 }
 const moveZombie4 = () => {
    pos4 = 0
@@ -92,7 +98,7 @@ const moveZombie4 = () => {
          zombie4.style.bottom = pos4 + "px"
       }
    }
-   id4 = setInterval(frame, 5)
+   id4 = setInterval(frame, (15 - lvlSpeed))
 }
 const moveZombie5 = () => {
    pos5 = 0
@@ -106,7 +112,7 @@ const moveZombie5 = () => {
          zombie5.style.top = pos5 + "px"
       }
    }
-   id5 = setInterval(frame, 5)
+   id5 = setInterval(frame, (15 - lvlSpeed))
 }
 const moveZombie6 = () => {
    pos6 = 0
@@ -120,7 +126,7 @@ const moveZombie6 = () => {
          zombie6.style.bottom = pos6 + "px"
       }
    }
-   id6 = setInterval(frame, 5)
+   id6 = setInterval(frame, (15 - lvlSpeed))
 }
 const moveZombie7 = () => {
    pos7 = 0
@@ -134,7 +140,7 @@ const moveZombie7 = () => {
          zombie7.style.top = pos7 + "px"
       }
    }
-   id7 = setInterval(frame, 5)
+   id7 = setInterval(frame, (15 - lvlSpeed))
 }
 const moveZombie8 = () => {
    pos8 = 0
@@ -148,7 +154,7 @@ const moveZombie8 = () => {
          zombie8.style.bottom = pos8 + "px"
       }
    }
-   id8 = setInterval(frame, 5)
+   id8 = setInterval(frame, (15 - lvlSpeed))
 }
 const spawnZombies = () => {
       let position = Math.floor(Math.random()*8)+1
@@ -188,54 +194,90 @@ const zombieAtk = () => {
    }
 }
 const killZombie1 = () => {
-   zombie1.removeChild(zombie1.firstChild)
-   clearInterval(id1)
-   pos1 = 0
-   zombie1.style.left = pos1 + "px"
+  if (zombie1.hasChildNodes() === true ) {
+      zombie1.removeChild(zombie1.firstChild)
+      clearInterval(id1)
+      pos1 = 0
+      zombie1.style.left = pos1 + "px"
+   }
 }
 const killZombie2 = () => {
-   zombie2.removeChild(zombie2.firstChild)
-   clearInterval(id2)
-   pos2 = 0
-   zombie2.style.right = pos2 + "px"
+   if (zombie2.hasChildNodes() === true ) {
+      zombie2.removeChild(zombie2.firstChild)
+      clearInterval(id2)
+      pos2 = 0
+      zombie2.style.right = pos2 + "px"
+   }
 }
 const killZombie3 = () => {
+   if (zombie3.hasChildNodes() === true ) {
    zombie3.removeChild(zombie3.firstChild)
    clearInterval(id3)
    pos3 = 0
    zombie3.style.top = pos3 + "px"
+   }
 }
 const killZombie4 = () => {
+   if (zombie4.hasChildNodes() === true ) {
    zombie4.removeChild(zombie4.firstChild)
    clearInterval(id4)
    pos4 = 0
    zombie4.style.bottom = pos4 + "px"
 }
+}
 const killZombie5 = () => {
+   if (zombie5.hasChildNodes() === true ) {
    zombie5.removeChild(zombie5.firstChild)
    clearInterval(id5)
    pos5 = 0
    zombie5.style.right = pos5 + "px"
    zombie5.style.top = pos5 + "px"
 }
+}
 const killZombie6 = () => {
+   if (zombie6.hasChildNodes() === true ) {
    zombie6.removeChild(zombie6.firstChild)
    clearInterval(id6)
    pos6 = 0
    zombie6.style.right = pos6 + "px"
    zombie6.style.bottom = pos6 + "px"
 }
+}
 const killZombie7 = () => {
+   if (zombie7.hasChildNodes() === true ) {
    zombie7.removeChild(zombie7.firstChild)
    clearInterval(id7)
    pos7 = 0
    zombie7.style.left = pos7 + "px"
    zombie7.style.top = pos7 + "px"
 }
+}
 const killZombie8 = () => {
+   if (zombie8.hasChildNodes() === true ) {
    zombie8.removeChild(zombie8.firstChild)
    clearInterval(id8)
    pos8 = 0
    zombie8.style.left = pos8 + "px"
    zombie8.style.bottom = pos8 + "px"
+}
+}
+const nextLevel = () => {
+   lvl++
+   lvlSpeed++
+   timer()
+}
+const reset = () => {
+   lvl = 1
+   lvlSpeed = 1
+   sec = 0
+   clearInterval(id)
+   killZombie1()
+   killZombie2()
+   killZombie3()
+   killZombie4()
+   killZombie5()
+   killZombie6()
+   killZombie7()
+   killZombie8()
+   clearInterval(id)
 }
