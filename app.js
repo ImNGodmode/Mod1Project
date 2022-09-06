@@ -31,12 +31,27 @@ const zombie5 = document.getElementById('zombie5')
 const zombie6 = document.getElementById('zombie6')
 const zombie7 = document.getElementById('zombie7')
 const zombie8 = document.getElementById('zombie8')
+const level = document.getElementById("lvl")
+const player = document.getElementById("playerHome")
 
+const player1 = () => {
+   const newPlayer = document.createElement("img")
+   newPlayer.src = "./assets/player1.png"
+   newPlayer.className = "playerImg"
+   player.append(newPlayer)
+}
+const player2 = () => {
+  
+      const newPlayer = document.createElement("img")
+      newPlayer.src = "./assets/player2.png"
+      newPlayer.className = "playerImg"
+      player.append(newPlayer)
+   }
 
 
 const timer = () => {
    sec =10
- 
+   level.innerText = `Level ${lvl}`
    id = setInterval(() => {
       time.innerText =  sec;
       sec--;
@@ -270,6 +285,7 @@ const reset = () => {
    lvl = 1
    lvlSpeed = 1
    sec = 0
+   time.innerText =  sec;
    clearInterval(id)
    killZombie1()
    killZombie2()
