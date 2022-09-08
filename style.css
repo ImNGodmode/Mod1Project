@@ -1,5 +1,7 @@
 body{
     background-color: green;
+    background-image: url(https://external-preview.redd.it/JsC0mQ1k9OR8ZJLj-EMJWqX0C43JxonjVlgEArzY26s.jpg?auto=webp&s=c8c80b9b673cd1ba2eda1e0667773c625f6d7f3b);
+    background-size: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -83,6 +85,9 @@ body{
     position: fixed;
     align-self: flex-start;
     margin-left: -50vw;
+    color: red;
+    font-size: xx-large;
+    z-index: 3;
 }
 .playSpace{
     /* border: solid blue 5px; */
@@ -182,4 +187,40 @@ body{
     display: flex;
     justify-content: center;
     z-index: 20;
+}
+.decor1{
+    /* border: solid red 1px; */
+    position: absolute;
+    height: 30vh;
+    width: 30vw;
+    margin-top: -55vh;
+    margin-left: 75vw;
+}
+.decor2{
+    /* border: solid red 1px; */
+    position: absolute;
+    height: 30vh;
+    width: 30vw;
+    margin-top: -55vh;
+    margin-left: -75vw;
+}
+.decor3{
+    /* border: solid red 1px; */
+    position: absolute;
+    height: 30vh;
+    width: 30vw;
+    margin-top: 55vh;
+    margin-left: 75vw;
+}
+.decor4{
+    /* border: solid red 1px; */
+    position: absolute;
+    height: 30vh;
+    width: 30vw;
+    margin-top: 40vh;
+    margin-left: -75vw;
+}
+.img1{
+width: 30vw;
+height: 30vh;
 }

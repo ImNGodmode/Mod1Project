@@ -48,6 +48,7 @@ const score = document.getElementById("highScore")
 const endScrene = document.getElementById("playContainer")
 const death = document.getElementById("death")
 const shot = document.getElementById("shot")
+const zombieCry = document.getElementById("zombieCry")
 // const gameOver = document.querySelector("gameOver")
 
 const player1 = () => {
@@ -205,6 +206,7 @@ const spawnZombies = () => {
          zombie.className = "zombie"
          zombiePosition.append(zombie)
          zombieAtk()
+         zombieCry.play()
          }
    }
 const zombieAtk = () => {
