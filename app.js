@@ -74,117 +74,117 @@ const moveZombie1 = () => {
    pos1 = 0
    clearInterval(id1)
    const frame = () => {
-      if (pos1 === 350) {
+      if (pos1 === 45) {
          clearInterval(id1)
          endGame()
       }else {
          pos1++
-         zombie1.style.left = pos1 + "px"
+         zombie1.style.left = pos1 + "%"
       }
    }
-   id1 = setInterval(frame, (15-lvlSpeed))
+   id1 = setInterval(frame, (150 - lvlSpeed))
 }
 const moveZombie2 = () => {
    pos2 = 0
    clearInterval(id2)
    const frame = () => {
-      if (pos2 === 350) {
+      if (pos2 === 45) {
          clearInterval(id2)
          endGame()
       }else {
          pos2++
-         zombie2.style.right = pos2 + "px"
+         zombie2.style.right = pos2 + "%"
       }
    }
-   id2 = setInterval(frame, (15 - lvlSpeed))
+   id2 = setInterval(frame, (150 - lvlSpeed))
 }
 const moveZombie3 = () => {
    pos3 = 0
    clearInterval(id3)
    const frame = () => {
-      if (pos3 === 200) {
+      if (pos3 === 45) {
          clearInterval(id3)
          endGame()
       }else {
          pos3++
-         zombie3.style.top = pos3 + "px"
+         zombie3.style.top = pos3 + "%"
       }
    }
-   id3 = setInterval(frame, (15 - lvlSpeed))
+   id3 = setInterval(frame, (150 - lvlSpeed))
 }
 const moveZombie4 = () => {
    pos4 = 0
    clearInterval(id4)
    const frame = () => {
-      if (pos4 === 200) {
+      if (pos4 === 45) {
          clearInterval(id4)
          endGame()
       }else {
          pos4++
-         zombie4.style.bottom = pos4 + "px"
+         zombie4.style.bottom = pos4 + "%"
       }
    }
-   id4 = setInterval(frame, (15 - lvlSpeed))
+   id4 = setInterval(frame, (150 - lvlSpeed))
 }
 const moveZombie5 = () => {
    pos5 = 0
    clearInterval(id5)
    const frame = () => {
-      if (pos5 === 350) {
+      if (pos5 === 45) {
          clearInterval(id5)
          endGame()
       }else {
          pos5++
-         zombie5.style.right = pos5 + "px"
-         zombie5.style.top = pos5 + "px"
+         zombie5.style.right = pos5 + "%"
+         zombie5.style.top = pos5 + "%"
       }
    }
-   id5 = setInterval(frame, (15 - lvlSpeed))
+   id5 = setInterval(frame, (150 - lvlSpeed))
 }
 const moveZombie6 = () => {
    pos6 = 0
    clearInterval(id6)
    const frame = () => {
-      if (pos6 === 350) {
+      if (pos6 === 45) {
          clearInterval(id6)
          endGame()
       }else {
          pos6++
-         zombie6.style.right = pos6 + "px"
-         zombie6.style.bottom = pos6 + "px"
+         zombie6.style.right = pos6 + "%"
+         zombie6.style.bottom = pos6 + "%"
       }
    }
-   id6 = setInterval(frame, (15 - lvlSpeed))
+   id6 = setInterval(frame, (150 - lvlSpeed))
 }
 const moveZombie7 = () => {
    pos7 = 0
    clearInterval(id7)
    const frame = () => {
-      if (pos7 === 350) {
+      if (pos7 === 45) {
          clearInterval(id7)
          endGame()
       }else {
          pos7++
-         zombie7.style.left = pos7 + "px"
-         zombie7.style.top = pos7 + "px"
+         zombie7.style.left = pos7 + "%"
+         zombie7.style.top = pos7 + "%"
       }
    }
-   id7 = setInterval(frame, (15 - lvlSpeed))
+   id7 = setInterval(frame, (150 - lvlSpeed))
 }
 const moveZombie8 = () => {
    pos8 = 0
    clearInterval(id8)
    const frame = () => {
-      if (pos8 === 350) {
+      if (pos8 === 45) {
          clearInterval(id8)
          endGame()
       }else {
          pos8++
-         zombie8.style.left = pos8 + "px"
-         zombie8.style.bottom = pos8 + "px"
+         zombie8.style.left = pos8 + "%"
+         zombie8.style.bottom = pos8 + "%"
       }
    }
-   id8 = setInterval(frame, (15 - lvlSpeed))
+   id8 = setInterval(frame, (150 - lvlSpeed))
 }
 const spawnZombies = () => {
       let position = Math.floor(Math.random()*8)+1
@@ -294,7 +294,7 @@ const killZombie8 = () => {
 const nextLevel = () => {
    if (canlvl === true){
       lvl++
-      lvlSpeed++
+      lvlSpeed += 10
       timer()
    }
 }
