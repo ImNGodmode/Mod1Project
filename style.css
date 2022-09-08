@@ -60,7 +60,7 @@ body{
     border-radius: 30px;
 }
 #playContainer{
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ body{
     width: 80vw;
 }
 #playerHome{
-    border: solid white 1px;
+    /* border: solid white 1px; */
     position: fixed;
     z-index: 5;
     height: 15vh;
@@ -79,13 +79,13 @@ body{
     width: 7.5vw;
 }
 .timer{
-    border: solid black 2px;
+    /* border: solid black 2px; */
     position: fixed;
     align-self: flex-start;
     margin-left: -50vw;
 }
 .playSpace{
-    border: solid blue 5px;
+    /* border: solid blue 5px; */
     height: 75vh;
     width: 75vw;
     border-radius: 50%;
@@ -102,6 +102,7 @@ body{
     width: 100px;
     position: absolute;
     margin-top: 32vh;
+    z-index: 6;
 }
 #zombie2{
     /* border: solid red 1px; */
@@ -110,6 +111,7 @@ body{
     position: absolute;
     margin-top: 32vh;
     margin-left: 68vw;
+    z-index: 6;
 }
 #zombie3{
     /* border: solid red 1px; */
@@ -118,6 +120,7 @@ body{
     position: absolute;
     margin-top: 0vh;
     margin-left: 34vw;
+    z-index: 6;
 }
 #zombie4{
     /* border: solid red 1px; */
@@ -126,6 +129,7 @@ body{
     position: absolute;
     margin-top: 64vh;
     margin-left: 34vw;
+    z-index: 6;
 }
 #zombie5{
     /* border: solid red 1px; */
@@ -134,6 +138,7 @@ body{
     position: absolute;
     margin-top: 0vh;
     margin-left: 68vw;
+    z-index: 6;
 }
 #zombie6{
     /* border: solid red 1px; */
@@ -142,6 +147,7 @@ body{
     position: absolute;
     margin-top: 64vh;
     margin-left: 68vw;
+    z-index: 6;
 }
 #zombie7{
     /* border: solid red 1px; */
@@ -150,6 +156,7 @@ body{
     position: absolute;
     margin-top: 0vh;
     margin-left: 0vw;
+    z-index: 6;
 }
 #zombie8{
     /* border: solid red 1px; */
@@ -158,6 +165,7 @@ body{
     position: absolute;
     margin-top: 64vh;
     margin-left: 0vw;
+    z-index: 6;
 }
 .zombie{
     height: 100px;
@@ -173,5 +181,5 @@ body{
     font-family: cursive;
     display: flex;
     justify-content: center;
-    z-index: 7;
+    z-index: 20;
 }

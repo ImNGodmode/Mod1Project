@@ -25,6 +25,15 @@ let id6 = null
 let id7 = null
 let id8 = null
 
+let zombie1Health = 1
+let zombie2Health = 1
+let zombie3Health = 1
+let zombie4Health = 1
+let zombie5Health = 1
+let zombie6Health = 1
+let zombie7Health = 1
+let zombie8Health = 1
+
 const zombie1 = document.getElementById('zombie1')
 const zombie2 = document.getElementById('zombie2')
 const zombie3 = document.getElementById('zombie3')
@@ -37,7 +46,8 @@ const level = document.getElementById("lvl")
 const player = document.getElementById("playerHome")
 const score = document.getElementById("highScore")
 const endScrene = document.getElementById("playContainer")
-
+const death = document.getElementById("death")
+const shot = document.getElementById("shot")
 // const gameOver = document.querySelector("gameOver")
 
 const player1 = () => {
@@ -200,27 +210,203 @@ const spawnZombies = () => {
 const zombieAtk = () => {
    if (document.getElementById("zombie1").hasChildNodes() === true && pos1 === 0) {
       moveZombie1()
+      if (lvl <= 10){
+         zombie1Health = 1
+      }else if ( 10 < lvl <= 20){
+         zombie1Health = 2
+      }else if ( 20 < lvl <= 30){
+         zombie1Health = 3
+      }else if ( 30 < lvl <= 40){
+         zombie1Health = 4
+      }else if ( 40 < lvl <= 50){
+         zombie1Health = 5
+      }else if ( 50 < lvl <= 60){
+         zombie1Health = 6
+      }else if ( 60 < lvl <= 70){
+         zombie1Health = 7
+      }else if ( 70 < lvl <= 80){
+         zombie1Health = 8
+      }else if ( 80 < lvl <= 90){
+         zombie1Health = 9
+      }else if ( 90 < lvl <= 100){
+         zombie1Health = 10
+      }else {zombie1Health = 11}
+      // console.log(zombie1Health)
    }
    if (document.getElementById("zombie2").hasChildNodes() === true && pos2 === 0) {
       moveZombie2()
+      if (lvl <= 10){
+         zombie2Health = 1
+      }else if ( 10 < lvl <= 20){
+         zombie2Health = 2
+      }else if ( 20 < lvl <= 30){
+         zombie2Health = 3
+      }else if ( 30 < lvl <= 40){
+         zombie2Health = 4
+      }else if ( 40 < lvl <= 50){
+         zombie2Health = 5
+      }else if ( 50 < lvl <= 60){
+         zombie2Health = 6
+      }else if ( 60 < lvl <= 70){
+         zombie2Health = 7
+      }else if ( 70 < lvl <= 80){
+         zombie2Health = 8
+      }else if ( 80 < lvl <= 90){
+         zombie2Health = 9
+      }else if ( 90 < lvl <= 100){
+         zombie2Health = 10
+      }else {zombie2Health = 11}
+      // console.log(zombie2Health)
    }
    if (document.getElementById("zombie3").hasChildNodes() === true && pos3 === 0) {
       moveZombie3()
+      if (lvl <= 10){
+         zombie3Health = 1
+      }else if ( 10 < lvl <= 20){
+         zombie3Health = 2
+      }else if ( 20 < lvl <= 30){
+         zombie3Health = 3
+      }else if ( 30 < lvl <= 40){
+         zombie3Health = 4
+      }else if ( 40 < lvl <= 50){
+         zombie3Health = 5
+      }else if ( 50 < lvl <= 60){
+         zombie3Health = 6
+      }else if ( 60 < lvl <= 70){
+         zombie3Health = 7
+      }else if ( 70 < lvl <= 80){
+         zombie3Health = 8
+      }else if ( 80 < lvl <= 90){
+         zombie3Health = 9
+      }else if ( 90 < lvl <= 100){
+         zombie3Health = 10
+      }else {zombie3Health = 11}
+      // console.log(zombie3Health)
    }
    if (document.getElementById("zombie4").hasChildNodes() === true && pos4 === 0) {
       moveZombie4()
+      if (lvl <= 10){
+         zombie4Health = 1
+      }else if ( 10 < lvl <= 20){
+         zombie4Health = 2
+      }else if ( 20 < lvl <= 30){
+         zombie4Health = 3
+      }else if ( 30 < lvl <= 40){
+         zombie4Health = 4
+      }else if ( 40 < lvl <= 50){
+         zombie4Health = 5
+      }else if ( 50 < lvl <= 60){
+         zombie4Health = 6
+      }else if ( 60 < lvl <= 70){
+         zombie4Health = 7
+      }else if ( 70 < lvl <= 80){
+         zombie4Health = 8
+      }else if ( 80 < lvl <= 90){
+         zombie4Health = 9
+      }else if ( 90 < lvl <= 100){
+         zombie4Health = 10
+      }else {zombie4Health = 11}
+      // console.log(zombie4Health)
    }
    if (document.getElementById("zombie5").hasChildNodes() === true && pos5 === 0) {
       moveZombie5()
+      if (lvl <= 10){
+         zombie5Health = 1
+      }else if ( 10 < lvl <= 20){
+         zombie5Health = 2
+      }else if ( 20 < lvl <= 30){
+         zombie5Health = 3
+      }else if ( 30 < lvl <= 40){
+         zombie5Health = 4
+      }else if ( 40 < lvl <= 50){
+         zombie5Health = 5
+      }else if ( 50 < lvl <= 60){
+         zombie5Health = 6
+      }else if ( 60 < lvl <= 70){
+         zombie5Health = 7
+      }else if ( 70 < lvl <= 80){
+         zombie5Health = 8
+      }else if ( 80 < lvl <= 90){
+         zombie5Health = 9
+      }else if ( 90 < lvl <= 100){
+         zombie5Health = 10
+      }else {zombie5Health = 11}
+      // console.log(zombie5Health)
    }
    if (document.getElementById("zombie6").hasChildNodes() === true && pos6 === 0) {
       moveZombie6()
+      if (lvl <= 10){
+         zombie6Health = 1
+      }else if ( 10 < lvl <= 20){
+         zombie6Health = 2
+      }else if ( 20 < lvl <= 30){
+         zombie6Health = 3
+      }else if ( 30 < lvl <= 40){
+         zombie6Health = 4
+      }else if ( 40 < lvl <= 50){
+         zombie6Health = 5
+      }else if ( 50 < lvl <= 60){
+         zombie6Health = 6
+      }else if ( 60 < lvl <= 70){
+         zombie6Health = 7
+      }else if ( 70 < lvl <= 80){
+         zombie6Health = 8
+      }else if ( 80 < lvl <= 90){
+         zombie6Health = 9
+      }else if ( 90 < lvl <= 100){
+         zombie6Health = 10
+      }else {zombie6Health = 11}
+      // console.log(zombie6Health)
    }
    if (document.getElementById("zombie7").hasChildNodes() === true && pos7 === 0) {
       moveZombie7()
+      if (lvl <= 10){
+         zombie7Health = 1
+      }else if ( 10 < lvl <= 20){
+         zombie7Health = 2
+      }else if ( 20 < lvl <= 30){
+         zombie7Health = 3
+      }else if ( 30 < lvl <= 40){
+         zombie7Health = 4
+      }else if ( 40 < lvl <= 50){
+         zombie7Health = 5
+      }else if ( 50 < lvl <= 60){
+         zombie7Health = 6
+      }else if ( 60 < lvl <= 70){
+         zombie7Health = 7
+      }else if ( 70 < lvl <= 80){
+         zombie7Health = 8
+      }else if ( 80 < lvl <= 90){
+         zombie7Health = 9
+      }else if ( 90 < lvl <= 100){
+         zombie7Health = 10
+      }else {zombie7Health = 11}
+      // console.log(zombie7Health)
    }
    if (document.getElementById("zombie8").hasChildNodes() === true && pos8 === 0) {
       moveZombie8()
+      if (lvl <= 10){
+         zombie8Health = 1
+      }else if ( 10 < lvl <= 20){
+         zombie8Health = 2
+      }else if ( 20 < lvl <= 30){
+         zombie8Health = 3
+      }else if ( 30 < lvl <= 40){
+         zombie8Health = 4
+      }else if ( 40 < lvl <= 50){
+         zombie8Health = 5
+      }else if ( 50 < lvl <= 60){
+         zombie8Health = 6
+      }else if ( 60 < lvl <= 70){
+         zombie8Health = 7
+      }else if ( 70 < lvl <= 80){
+         zombie8Health = 8
+      }else if ( 80 < lvl <= 90){
+         zombie8Health = 9
+      }else if ( 90 < lvl <= 100){
+         zombie8Health = 10
+      }else {zombie8Health = 11}
+      // console.log(zombie8Health)
    }
 }
 const killZombie1 = () => {
@@ -229,6 +415,7 @@ const killZombie1 = () => {
       clearInterval(id1)
       pos1 = 0
       zombie1.style.left = pos1 + "px"
+
    }
 }
 const killZombie2 = () => {
@@ -294,7 +481,11 @@ const killZombie8 = () => {
 const nextLevel = () => {
    if (canlvl === true){
       lvl++
-      lvlSpeed += 10
+      if (lvlSpeed < 90){
+         lvlSpeed += 10
+      }else {
+         lvlSpeed =1
+      }
       timer()
    }
 }
@@ -328,6 +519,7 @@ const endGame = () => {
   end.className = "gameOver"
   end.addEventListener("click", newGame)
   endScrene.append(end)
+  death.play()
   checkHighScore()
   player.removeChild(player.firstChild)
   lvl = 1
@@ -348,3 +540,67 @@ const newGame = () =>  {
       endScrene.removeChild(endScrene.lastChild)
       reset()
    }
+const hitZombie1 = () => {
+   zombie1Health--
+   console.log(zombie1Health)
+   shot.play()
+   if (zombie1Health <= 0) {
+      killZombie1()
+   } 
+}
+const hitZombie2 = () => {
+   zombie2Health--
+   shot.play()
+   console.log(zombie2Health)
+   if (zombie2Health <= 0) {
+      killZombie2()
+   } 
+}
+const hitZombie3 = () => {
+   zombie3Health--
+   shot.play()
+   console.log(zombie3Health)
+   if (zombie3Health <= 0) {
+      killZombie3()
+   } 
+}
+const hitZombie4 = () => {
+   zombie4Health--
+   shot.play()
+   console.log(zombie4Health)
+   if (zombie4Health <= 0) {
+      killZombie4()
+   } 
+}
+const hitZombie5 = () => {
+   zombie5Health--
+   shot.play()
+   console.log(zombie5Health)
+   if (zombie5Health <= 0) {
+      killZombie5()
+   } 
+}
+const hitZombie6 = () => {
+   zombie6Health--
+   shot.play()
+   console.log(zombie6Health)
+   if (zombie6Health <= 0) {
+      killZombie6()
+   } 
+}
+const hitZombie7 = () => {
+   zombie7Health--
+   shot.play()
+   console.log(zombie7Health)
+   if (zombie7Health <= 0) {
+      killZombie7()
+   } 
+}
+const hitZombie8 = () => {
+   zombie8Health--
+   shot.play()
+   console.log(zombie8Health)
+   if (zombie8Health <= 0) {
+      killZombie8()
+   } 
+}
